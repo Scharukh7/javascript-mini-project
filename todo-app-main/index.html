@@ -33,9 +33,28 @@
       </header>
 
       <main class="main">
-        <ul> class="todo-list" id="todo-list">
-          
+        <ul class="todo-list" id="todo-list">
+
         </ul>
+        <div class ="todo-filters">
+          <div class="todo-filters-side">
+            <p class="btn"><span id="items-left">5</span>item(s) left</p>
+            <button class="btn btn-clear" id="clear-completed">Clear Completed</button>
+          </div>
+          <div class="todo-filters-centers">
+            
+            <input type="radio" name="filter" id="all" value="all" class="btn btn-bold" checked>
+            <label class="btn btn-bold" for="all">All</label>
+            
+            <input type="radio" name="filter" id="active" value="active" class="btn btn-bold">
+            <label class="btn btn-bold" for="active">Active</label>
+
+            <input type="radio" name="filter" id="completed" value="completed" class="btn btn-bold">
+            <label class="btn btn-bold" for="completed">Completed</label>
+            
+          </div>
+
+        </div>
       </main>
 
     </div>
