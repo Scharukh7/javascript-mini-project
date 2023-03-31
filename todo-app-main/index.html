@@ -25,11 +25,15 @@
             <img src="./assets/images/icon-sun.svg" alt="sun icon for light mode" />
           </button>
         </section>
-        <div class="todo-header">
-          <div class="todo-circle"></div>
-          <label for="todo-input">Create a new TODO</label>
-          <input type="text" class="todo-input" name="todo-input" id="todo-input" placeholder="Create a new TODO..."/>
-        </div>
+        <form class="input__form">
+          <input
+            type="text"
+            class="header-input"
+            placeholder="Create a new todo..."
+            aria-label="new task decription input"
+          />
+          <button type="submit" class="form-btn">Add</button>
+        </form>
       </header>
 
       <main class="main">
@@ -74,7 +78,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="">Shahrukh Shah</a>.
   </div>
 </body>
 </html>
