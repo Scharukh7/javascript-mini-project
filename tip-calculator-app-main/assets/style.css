@@ -1,0 +1,246 @@
+/* Importing the required fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&family=Space+Mono:wght@700&display=swap");
+
+/* Defining the color variables and font-size */
+:root {
+  --black: #171321;
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(180, 43%, 96%);
+  --white: hsl(0, 0%, 100%);
+  --font-size: 24px;
+}
+
+/* General styling - setting box-sizing, margin, and padding for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+
+#tip-input {
+  display: flex;
+  text-align: center;
+  font-size: 15px;
+}
+
+#people-input,
+#bill-input {
+  text-align: end;
+}
+
+/* Body styling - setting font-family, background-color, and text color */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+/* Header styling - text alignment and padding */
+.header {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Main container styling - setting display properties, alignment, gap, padding, and min-height */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Calculator form and results container styling - setting display properties, gap, width, background-color, border-radius, padding, and box-shadow */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Calculator form styling - setting display properties, gap, and width */
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Input field label styling - setting color and font-weight */
+.label {
+  color: var(--dark-grayish-cyan);
+  font-weight: bold;
+}
+
+/* Input group styling - setting display properties and gap */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Input container and people container styling - setting display properties, alignment, gap, background-color, border-radius, padding, and width */
+.input-container,
+.people-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+/* Input field styling - removing border, setting background-color, removing outline, and setting width */
+input {
+  border: none;
+  background-color: var(--very-light-grayish-cyan);
+  outline: none;
+  width: 100%;
+  height: 3rem;
+}
+
+/* Button container styling - setting background-color, padding, border-radius, display properties, grid-template-columns, and gap */
+.btn-container {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Changed from 2 to 3 */
+  gap: 1rem; /* Changed from 0.5rem to 1rem */
+}
+
+/* Tip percentage buttons styling - setting font-size and padding */
+.btn {
+  color: white;
+  background-color: var(--very-dark-cyan);
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border-style: none;
+}
+/* Active button styling - setting background-color and text color */
+.btn.active {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+/* Results container styling - setting background-color, border-radius, display properties, gap, padding, and width */
+.calculator-results {
+  background-color: var(--very-dark-cyan);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+/* Result group styling - setting display properties, grid-template-columns, gap, and alignment */
+.result-group {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.both-result-groups {
+  display: inline-block;
+  padding: 20px 0 10px 0;
+}
+
+.result-group p {
+  color: white;
+}
+
+.result-desc-span {
+  color: var(--dark-grayish-cyan);
+}
+
+/* Result description styling - setting color, font-size, and text alignment */
+.result-desc {
+  color: var(--dark-grayish-cyan);
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 1rem;
+}
+
+/* Result value styling - setting font-family, font-size, font-weight, and text alignment */
+.result-value {
+  color: var(--strong-cyan);
+  font-family: "Space Mono", monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Currency styling - setting color */
+.currency {
+  color: var(--strong-cyan);
+}
+
+/* Reset button styling - setting font-size, padding, and text-transform */
+.reset-btn {
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: var(--light-grayish-cyan);
+  border-style: none;
+}
+
+/* Footer styling - setting text alignment and padding */
+.attribution {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Footer link styling - setting color */
+.attribution a {
+  color: var(--very-dark-cyan);
+}
+
+/* Media query for responsiveness */
+@media (min-width: 768px) {
+  /* Main container styling for larger screens - setting padding */
+  .main-container {
+    padding: 4rem;
+  }
+
+  /* Calculator container styling for larger screens - setting flex-direction and justify-content */
+  .calculator {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  /* Input group styling for larger screens - setting width */
+  .input-group {
+    width: 100%;
+  }
+
+  /* Button container styling for larger screens - setting grid-template-columns and gap */
+  .btn-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  /* Results container styling for larger screens - setting align-self */
+  .calculator-results {
+    align-self: auto;
+  }
+}

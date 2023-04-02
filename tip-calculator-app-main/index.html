@@ -1,62 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <title>Tip calculator app</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-  <header>
-    <h1>Tip Calculator</h1>
-    <nav>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <form>
-      <label for="bill">Bill</label>
-      <input type="number" id="bill" name="bill" required>
-
-  <label for="tip">Select Tip %</label>
-  <select id="tip" name="tip">
-    <option value="5">5%</option>
-    <option value="10">10%</option>
-    <option value="15">15%</option>
-    <option value="25">25%</option>
-    <option value="50">50%</option>
-    <option value="custom">Custom</option>
-  </select>
-
-  <label for="custom-tip">Custom Tip %</label>
-  <input type="number" id="custom-tip" name="custom-tip">
-
-  <label for="people">Number of People</label>
-  <input type="number" id="people" name="people" required>
-
-  <div>
-    <h2>Tip Amount <span class="sr-only">per person</span></h2>
-    <p id="tip-amount">$0.00</p>
-  </div>
-
-  <div>
-    <h2>Total <span class="sr-only">per person</span></h2>
-    <p id="total">$0.00</p>
-  </div>
-
-  <button type="reset">Reset</button>
-</form>
-  </main>
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/Scharukh7">Shahrukh Shah</a>.
-    </div>
-  </footer>
-  <script src="./script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking to Google Fonts and Favicon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href=".\assets\images\favicon-32x32.png"
+    />
+    <!-- Linking to CSS stylesheet -->
+    <link rel="stylesheet" href=".\assets\style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <!-- Header section with logo -->
+    <header class="header">
+      <img src=".\assets\images\logo.svg" alt="Logo" />
+    </header>
+    <!-- Main grid container with nested boxes -->
+    <main class="main-container">
+      <!-- Section for calculator inputs and outputs -->
+      <section class="calculator">
+        <!-- Box for input fields -->
+        <div class="calculator-form">
+          <!-- Input field for bill amount -->
+          <div class="input-group">
+            <label for="bill-input" class="label">Bill</label>
+            <div class="input-container">
+              <img src=".\assets\images\icon-dollar.svg" alt="Dollar Icon" />
+              <form action="">
+                <input type="number" id="bill-input" placeholder="0.0" />
+              </form>
+            </div>
+          </div>
+          <!-- Input field for tip percentage selection -->
+          <div class="input-group">
+            <label for="tip-input" class="label">Select Tip %</label>
+            <div class="btn-container">
+              <button class="btn" data-value="5">5%</button>
+              <button class="btn" data-value="10">10%</button>
+              <button class="btn active" data-value="15">15%</button>
+              <button class="btn" data-value="25">25%</button>
+              <button class="btn" data-value="50">50%</button>
+              <form action="">
+                <input type="number" id="tip-input" placeholder="Custom" />
+              </form>
+            </div>
+          </div>
+          <!-- Input field for number of people splitting the bill -->
+          <div class="input-group">
+            <label for="people-input" class="label">Number of People</label>
+            <p id="people-error"></p>
+            <div class="people-container">
+              <img src=".\assets\images\icon-person.svg" alt="Person Icon" />
+              <form action="">
+                <input type="number" id="people-input" placeholder="1" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Box for displaying calculator results -->
+        <div class="calculator-results">
+          <!-- Group for displaying tip amount per person -->
+          <div class="both-result-groups">
+            <div class="result-group">
+              <div class="result-desc">
+                <p>
+                  Tip Amount<br /><span class="result-desc-span">/ person</span>
+                </p>
+              </div>
+              <div class="result-value">
+                <span class="currency">$</span><span class="tip-value">0.00</span>
+              </div>
+            </div>
+            <!-- Group for displaying total amount per person -->
+            <div class="result-group">
+              <div class="result-desc">
+                <p>Total<br /><span class="result-desc-span">/ person</span></p>
+              </div>
+              <div class="result-value">
+                <span class="currency">$</span
+                ><span class="total-value">0.00</span>
+              </div>
+            </div>
+          </div>
+          <button class="reset-btn">RESET</button>
+        </div>
+        <!--setting up footer with name and link to github-->
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/Scharukh7">Shahrukh Shah</a>.
+      </div>
+    </footer>
+    <!--Linking to JS file-->
+    <script src=".\assets\index.js"></script>
+  </body>
 </html>
