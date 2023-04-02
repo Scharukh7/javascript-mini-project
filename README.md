@@ -13,7 +13,7 @@ This repository contains a simple tip calculator app built using HTML, CSS, and 
 ## Files
 - `index.html`: The main HTML file containing the structure of the app.
 - `style.css`: The stylesheet file containing the styling and layout for the app.
-- `script.js`: The JavaScript file containing the logic and functionality for the app.
+- `index.js`: The JavaScript file containing the logic and functionality for the app.
 
 ## How to use
 1. Open `index.html` in a modern web browser.
